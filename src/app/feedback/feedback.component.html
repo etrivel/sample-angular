@@ -1,0 +1,53 @@
+<!--navbar-->
+
+
+<section class="vh-100" >
+        
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+      
+       
+
+          <div class="row g-0">
+            
+
+            <div class=" d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <div class="d-flex">
+                  
+                       
+                    <form class="form-group" (ngSubmit)="onSubmit(myForm)"  #myForm="ngForm"> 
+                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Customer Feedback</h5>
+                        <section class="form-outline">
+                            <input type="text" class="form-control form-control-lg"required [(ngModel)]="name" name="name">
+                            <label class="form-label" for="name">Name</label><br>
+                          
+                        </section>
+                        <div class="form-outline">
+                          <input type="email"  id="email" class="form-control form-control-lg" required [(ngModel)]="email" name="email">
+                          <label class="form-label" for="email">Email</label>
+                        </div>
+                         <br>
+                        <div class="form-outline">
+                            <input type="tel"  id="number" class="form-control form-control-lg" required [(ngModel)]="number" name="number" >
+                            <label class="form-label" for="number">Phone</label>
+                          </div><br>
+                        <div class="form-outline">
+                            <textarea class="form-control" id="message" rows="4"></textarea>
+                          <label class="form-label" for="Message" >Message</label>
+                         </div><br>
+                         <div class="pt-1 mb-4">
+                            <button class="btn btn-primary btn-md btn-block" type="submit" [disabled]="!myForm.form.valid"  >submit</button>
+                          </div>
+                       
+                     
+           </form></div></div></div></div></div></div></section>
+                       
+                           
+                
+                            
+                
+                          
+
+
+                                      

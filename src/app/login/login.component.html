@@ -1,0 +1,64 @@
+
+<section class="vh-100" >
+  <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" style="
+  background-image: url('https://mdbootstrap.com/img/new/slides/003.jpg');
+height:100vh; width:250vh ;">  <div class="mask mask-custom">  
+<div style="align-items: center;">   
+  <div class="row d-flex justify-content-center align-items-center h-100">
+         <div class=" d-flex align-items-center">
+            <div class="card-body p-4 p-lg-5 text-black">
+                  
+                  <div class="col-md-3 col-lg-7 d-flex align-items-center">
+                    <div class="card-body p-4 p-lg-5 text-black">
+                    <form (ngSubmit)="onSubmit()"  #myForm="ngForm" [formGroup]="myGroup" novalidate> 
+                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+      
+                        <div class="form-outline">
+                          
+                        
+                            
+                            <input type="email"class="form-control form-control-lg" formControlName="email">
+                            <label class="form-label" for="email"  style=" color:white">Email</label>
+                       
+                            <div *ngIf="myGroup.controls['email'].invalid && myGroup.controls['email'].touched" >
+                              <div *ngIf="myGroup.controls['email'].errors">
+                              <p style="color:red">Email is required.</p>
+                             </div>
+                          </div>
+                             <br>
+                 <div class="form-outline">
+                  <input type="password"class="form-control form-control-lg" formControlName="pass">
+                  <label class="form-label" for="pass"style=" color:white">Password</label>
+             
+                  <div *ngIf="myGroup.controls['pass'].invalid && myGroup.controls['pass'].touched" >
+                    <div *ngIf="myGroup.controls['pass'].errors">
+                        <p style="color:red">Password is required</p>
+                   </div>
+                </div>
+                        </div><br>
+      
+                        <div class="pt-1 mb-4;form-outline">
+                          <button class="btn btn-primary btn-md btn-block" type="button" [disabled]="!myForm.form.valid" (click)="onSelect()" >Login</button>
+                        </div><br>
+      
+                        <a class="small text-muted" href="#" style=" color:white">Forgot password?</a>
+                        <p class="mb-5 pb-lg-2" style="color: #393f81;"style=" color:white">Don't have an account? <a (click)="onClick()" style="color: #393f81; color:white">Register here</a></p>
+                        
+                        
+                  
+                  </div>
+                  </form>
+                                    </div>
+                </div>
+              </div>
+              </div>
+              </div>
+           
+            </div></div></div>
+            </section>
+            
+            
+          
+              
+  
+              
